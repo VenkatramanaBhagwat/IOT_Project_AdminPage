@@ -5,23 +5,17 @@
       <title>Main page</title>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/SBU_IOT_1.css">
-    </head>
+      <link rel="stylesheet" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/SBU_IOT_1.css">
+ </head>
 
-    <body>
+<body>
 
-    	<!-- DOCUMENTATION NAVBAR -->
 
     	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-
-        <!-- Inside of a Container -->
       <div class="container-fluid">
+      <div class="navbar-header">
 
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <!-- This is the actual code that create the "hamburger icon" -->
-        <!-- The data-target grabs ids to put into the icon -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 
             <!--  Code for the hamburger icon-->
             <span class="sr-only">Toggle navigation</span>
@@ -30,8 +24,8 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/loginpage.html" id="stonybrook">StonyBrook IOT</a>
-        </div>
+      <a class="navbar-brand" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/loginpage.html" id="stonybrook">StonyBrook IOT</a>
+      </div>
 
         <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -39,47 +33,42 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="stonybrook"role="button" aria-haspopup="true" aria-expanded="false">Devices <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="adddevice.html">Add a new Device</a></li>
-                <li><a href="removedevice.html">Existing Devices</a></li>
+                <li><a href="adddevice.html">Add a New Device</a></li>
+                <li><a href="" id="existingdevices">Existing Devices</a></li>
               </ul>
             </li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" id="stonybrook"data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" id="stonybrook" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="adduser.html">Add a new User</a></li>
-                <li><a href="removeuser.html">Existing Users</a></li>
-
-              </ul>
+                <li><a href="adduser.html" id="adduserwindow">Add a New User</a></li>
+                <li><a href="" id="existingusers">Existing Users</a></li>
+            </ul>
             </li>
-          </ul>
+        </ul>
 
-
-          <!-- Stuff on the Right -->
           <ul class="nav navbar-nav navbar-right">
             <ul class="nav navbar-nav">
               <li><a href="/Users/verb/Documents/WebDeveloper/SBU_IOT/about.html">About</a></li>
             </ul>
           </ul>
 
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        </div><!-- navbar-collapse -->
+      </div><!-- container-fluid -->
     </nav>
+  <p></p>
+  <p></p>
+  <p></p>
 
-
-    <!-- OTHER STUFF ON THE PAGE -->
-  <p></p>
-  <p></p>
-  <p></p>
     <div class="container" id="usertypes">
       <div class="jumbotron">
       <h2>User Types:</h2>
-    <ul>
-    <li> Faculty</li>
-    <li>Staff</li>
-    <li>Grad Students</li>
-    <li>Undergrad Students</li>
-    <li>Guest Users</li>
+      <ul>
+          <li> Faculty</li>
+          <li>Staff</li>
+          <li>Grad Students</li>
+          <li>Undergrad Students</li>
+          <li>Guest Users</li>
     </ul>
     </div>
     </div>
@@ -91,37 +80,55 @@
       <ul>
         <li>Rooms
           <ul>
-        <li><i>Frey Hall</i></li>
-        <li><i>Student Activity Center</i></li>
-        <li><i>Light Engineering</i></li>
+            <li><i>Frey Hall</i></li>
+            <li><i>Student Activity Center</i></li>
+            <li><i>Light Engineering</i></li>
           </ul>
       </li>
       <li>Devices
         <ul>
-      <li><i>Light</i></li>
-      <li><i>Air Conditioning</i></li>
-      <li><i>Fan</i></li>
-      <li><i>Heater</i></li>
-      <li><i>Printer</i></li>
+          <li><i>Light</i></li>
+          <li><i>Air Conditioning</i></li>
+          <li><i>Fan</i></li>
+          <li><i>Heater</i></li>
+          <li><i>Printer</i></li>
         </ul>
     </li>
       </ul>
-
+    </div>
     </div>
 
+    <!-- <table id="allusers" border="">
+      <thead>
+       <tr> <th>User Name</th> <th>Qty</th></tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table> -->
+<!-- <div class="" id="ttbl">
+
+    <table id="table" border="">
+       <tr> <th>User Name</th> <th>Qty</th></tr>
+    </table>
+</div> -->
+    <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
+    <div class="container">
+      <div class="jumbotron">
+    <div class="" id="ttbl">
+
+      <table class="table  table-bordered table-hover"id="allusertable" >
+      <tr class=""> <th>No</th> <th>User First Name</th> <th>User Last Name</th> <th>User Type</th> <th>Email Id</th><th>SBU Id</th></tr>
+        </table>
     </div>
-
-    <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
-    <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
-
+  </div>
+  </div>
     <script
     src="http://code.jquery.com/jquery-3.1.1.js"
     integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
     crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-
   <script src='SBU_IOT_1.js'></script>
+
   </body>
   </html>

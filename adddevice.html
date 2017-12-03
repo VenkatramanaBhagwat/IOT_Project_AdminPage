@@ -7,56 +7,67 @@
 
   </head>
   <body>
-
+<!-- nav bar -->
     <nav class="navbar navbar-inverse">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/mainpage.html" id="stonybrook">Back</a>
+    <div class="navbar-header">
+    <a class="navbar-brand" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/mainpage.html" id="stonybrook">Back</a>
+
+<form class="" id="form_adddevice"action="" method="post">
+
 
     <div class="container">
-      <div class="jumbotron">
-        <h1>Please Enter Device Details</h1>
+    <div class="jumbotron">
+    <h1>Please Enter Device Details</h1>
+    <div class="" id="devicecategory">
+          <label for="userem">Building Name:</label>
+          <select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" class="form-control" name="buildingname" >
+              <option value=""></option>
+              <option value="Frey Hall">Frey Hall</option>
+              <option value="Student Activity Center">Student Activity Center</option>
+              <option value="Light Engineering">Light Engineering</option>
+         </select>
+   </div>
 
-
-<div class="" id="devicecategory">
-  <label for="userem">Building Name:</label>
-        <select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" class="form-control" name="buildingname">
-      <option value=""></option>
-      <option value="freyhall">Frey Hall</option>
-      <option value="sac">Student Activity Center</option>
-      <option value="lighteng">Light Engineering</option>
-    </select>
-</div>
 
 <div class="" id="roomno">
-
         <label for="userem">Room No:</label>
-        <select id="ddl2" class="form-control" required>
+        <select id="ddl2" class="form-control" name="room">
         </select>
 </div>
-        <label for="userem">Device Name:</label>
-        <input type="text" class="form-control" name="" placeholder="Device Name" required>
+
+<!-- this gets updated based on "Building Name" -->
+
+
+  <label for="userem">Device Id:</label>
+  <input type="text" class="form-control" name="devicename" placeholder="E.g. lig234ac" required>
+
 
   <label for="userem">Device Type:</label>
-        <select name="usercategory" class="form-control" required>
+      <select name="devicecategory" class="form-control" required>
           <option value=""></option>
-          <option >Light</option>
-          <option >Air Conditioning</option>
-          <option >Fan</option>
-          <option >Heatert</option>
-          <option >Printer</option>
-        </select>
+          <option value="Light">Light</option>
+          <option value="Air Conditioning">Air Conditioning</option>
+          <option value="Fan">Fan</option>
+          <option value="Heater">Heater</option>
+          <option value="Door">Door</option>
+      </select>
         <p></p>
-       <button type="button" class="btn btn-outline-success">Add</button>
+        <input type="text" name="status" value="off" hidden="">
+        <input type="number" name="working" value="1" hidden="">
+
+        <p></p>
+        <input type="submit" class="btn btn-outline-success" name="deviceAdd" value="Add">
       </div>
     </div>
 
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous">
-  </script>
-  <script src='SBU_IOT_1.js'>
-  </script>
+</form>
 
-  </body>
+<script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous">
+</script>
+<script src='SBU_IOT_1.js'>
+</script>
+</body>
 </html>
