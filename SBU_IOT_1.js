@@ -47,14 +47,14 @@ function configureDropDownLists(ddl1,ddl2) {
 
       $.ajax({
          type:'GET',
-         url:'',
+         url:'http://localhost:3000/endusers',
          success:function(data){
           console.log(data);
           var all_users="";
           for(var i=0; i<data.length;i++)
           {
             var j=i+1;
-          all_users ="<tr><th>"+j+"</th><th>"+data[i].firstname+"</th> <th>"+data[i].lastname+"</th> <th>"+data[i].usercategory+"</th> <th>"+data[i].emailid+"</th> <th>"+data[i].sbu_id+"</th></tr>";
+          all_users ="<tr><th>"+j+"</th><th>"+data[i].firstname+"</th> <th>"+data[i].lastname+"</th> <th>"+data[i].usercategory+"</th> <th>"+data[i].emailid+"</th> <th>"+data[i].sbuid+"</th></tr>";
           $("#allusertable tbody").append(all_users);
           }
         }
@@ -71,19 +71,101 @@ function configureDropDownLists(ddl1,ddl2) {
     formData.forEach(function(ele){
       newuserdata[ele.name]=ele.value;
     })
+
+// var newuserdata = {
+ 
+//     "firstname": "venkat",
+//     "lastname": "sentnow",
+//     "usercategory": "bnbnbnbn",
+//     "emailid": "venkat@chitr",
+//     "sbuid": 123,
+//     "gender": "male"
+    
+//   };
 alert(JSON.stringify(newuserdata));
-    // $.ajax({
-    //   type: "POST",
-    //   url: "",
-    //   data: newuserdata,
-    //   success: function(msg){
-    //     if(msg.data ==no error )
-    //     {alert( "User Added : "+JSON.stringify(newuserdata) );}
-    //     else {alert("could not add, try again "); }
-    //    },
-    //   dataType: "json",
-    //   contentType : "application/json"
-    // });
+newuserdata = (JSON.stringify(newuserdata));
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:3000/endusers',
+      data: newuserdata,
+      success: function(msg){
+       alert(JSON.stringify(newuserdata));
+
+       },
+      dataType: "json",
+      contentType : "application/json"
+    });
+
+  });
+
+
+//to delete one user
+
+  $( "#form_deleteuser" ).submit(function(event) {
+      //event.preventDefault();
+    var formData = $(this).serializeArray();
+    var newuserdata={};
+    formData.forEach(function(ele){
+      newuserdata[ele.name]=ele.value;
+    })
+
+var newuserdata = [
+ 
+   
+   { "emailid": "sfs@chitr"},{ "emailid": "harish@suresh.com"}
+    
+    
+  ];
+alert(JSON.stringify(newuserdata));
+// newuserdata = (JSON.stringify(newuserdata));
+    $.ajax({
+      type: 'DELETE',
+      url: 'http://localhost:3000/endusers',
+      data: newuserdata,
+      success: function(msg){
+       alert(JSON.stringify(newuserdata));
+
+       },
+      dataType: "json",
+      contentType : "application/json"
+    });
+
+  });
+
+
+//Wmodify user
+
+  $( "#form_modifyuser" ).submit(function(event) {
+      //event.preventDefault();
+    var formData = $(this).serializeArray();
+    var newuserdata={};
+    formData.forEach(function(ele){
+      newuserdata[ele.name]=ele.value;
+    })
+
+// var newuserdata = {
+ 
+//     "firstname": "venkat",
+//     "lastname": "sentnow",
+//     "usercategory": "bnbnbnbn",
+//     "emailid": "venkat@chitr",
+//     "sbuid": 123,
+//     "gender": "male"
+    
+//   };
+alert(JSON.stringify(newuserdata));
+newuserdata = (JSON.stringify(newuserdata));
+    $.ajax({
+      type: 'PUT',
+      url: 'http://localhost:3000/endusers',
+      data: newuserdata,
+      success: function(msg){
+       alert(JSON.stringify(newuserdata));
+
+       },
+      dataType: "json",
+      contentType : "application/json"
+    });
 
   });
 
