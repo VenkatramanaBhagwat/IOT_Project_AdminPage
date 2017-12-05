@@ -47,7 +47,7 @@ function configureDropDownLists(ddl1,ddl2) {
 
       $.ajax({
          type:'GET',
-         url:'http://localhost:3000/endusers',
+         url:'http://localhost:8000/endusers',
          success:function(data){
           console.log(data);
           var all_users="";
@@ -73,14 +73,14 @@ function configureDropDownLists(ddl1,ddl2) {
     })
 
 // var newuserdata = {
- 
+
 //     "firstname": "venkat",
 //     "lastname": "sentnow",
 //     "usercategory": "bnbnbnbn",
 //     "emailid": "venkat@chitr",
 //     "sbuid": 123,
 //     "gender": "male"
-    
+
 //   };
 alert(JSON.stringify(newuserdata));
 newuserdata = (JSON.stringify(newuserdata));
@@ -110,11 +110,11 @@ newuserdata = (JSON.stringify(newuserdata));
     })
 
 var newuserdata = [
- 
-   
+
+
    { "emailid": "sfs@chitr"},{ "emailid": "harish@suresh.com"}
-    
-    
+
+
   ];
 alert(JSON.stringify(newuserdata));
 // newuserdata = (JSON.stringify(newuserdata));
@@ -133,7 +133,7 @@ alert(JSON.stringify(newuserdata));
   });
 
 
-//Wmodify user
+//modify user
 
   $( "#form_modifyuser" ).submit(function(event) {
       //event.preventDefault();
@@ -144,14 +144,14 @@ alert(JSON.stringify(newuserdata));
     })
 
 // var newuserdata = {
- 
+
 //     "firstname": "venkat",
 //     "lastname": "sentnow",
 //     "usercategory": "bnbnbnbn",
 //     "emailid": "venkat@chitr",
 //     "sbuid": 123,
 //     "gender": "male"
-    
+
 //   };
 alert(JSON.stringify(newuserdata));
 newuserdata = (JSON.stringify(newuserdata));
@@ -179,7 +179,15 @@ newuserdata = (JSON.stringify(newuserdata));
       deviceData.forEach(function(ele){
         newdevicedata[ele.name]=ele.value;
       })
+
+      var fav = [];
+      $.each($("input[name='accessright']:checked"), function(){
+          fav.push($(this).val());
+      });
+  newdevicedata['accessright']=fav;
   alert(JSON.stringify(newdevicedata));
+
+
       // $.ajax({
       //   type: "POST",
       //   url: "",
@@ -194,3 +202,61 @@ newuserdata = (JSON.stringify(newuserdata));
       // });
 
     });
+//remove device
+    $( "#form_removedevice" ).submit(function(event) {
+        //event.preventDefault();
+      var deviceData = $(this).serializeArray();
+      var newdevicedata={};
+      deviceData.forEach(function(ele){
+        newdevicedata[ele.name]=ele.value;
+      })
+
+  alert(JSON.stringify(newdevicedata));
+
+
+      // $.ajax({
+      //   type: "POST",
+      //   url: "",
+      //   data: newdevicedata,
+      //   success: function(msg){
+      //     if(msg.data ==no error )
+      //     {alert( "Device Added : "+JSON.stringify(newdevicedata) );}
+      //     else {alert("could not add, try again "); }
+      //    },
+      //   dataType: "json",
+      //   contentType : "application/json"
+      // });
+
+    });
+
+    //update device
+        $( "#form_modify" ).submit(function(event) {
+          //event.preventDefault();
+        var deviceData = $(this).serializeArray();
+        var newdevicedata={};
+        deviceData.forEach(function(ele){
+          newdevicedata[ele.name]=ele.value;
+        })
+
+        var fav = [];
+        $.each($("input[name='accessright']:checked"), function(){
+            fav.push($(this).val());
+        });
+    newdevicedata['accessright']=fav;
+    alert(JSON.stringify(newdevicedata));
+
+
+          // $.ajax({
+          //   type: "POST",
+          //   url: "",
+          //   data: newdevicedata,
+          //   success: function(msg){
+          //     if(msg.data ==no error )
+          //     {alert( "Device Added : "+JSON.stringify(newdevicedata) );}
+          //     else {alert("could not add, try again "); }
+          //    },
+          //   dataType: "json",
+          //   contentType : "application/json"
+          // });
+
+        });

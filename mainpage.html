@@ -5,7 +5,7 @@
       <title>Main page</title>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <link rel="stylesheet" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/SBU_IOT_1.css">
+      <link rel="stylesheet" href="">
  </head>
 
 <body>
@@ -31,48 +31,40 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="stonybrook"role="button" aria-haspopup="true" aria-expanded="false">Devices <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="adddevice.html">Add a New Device</a></li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="stonybrook"role="button" aria-haspopup="true" aria-expanded="false">Devices<span class="caret"></span></a>
+              <ul class="dropdown-menu" id="deviceactions">
+                <li><a href="" id="adddevice">Add Device</a></li>
+                <li><a href="" id="removedevices">Remove Devices</a></li>
+                <li><a href="" id="modifydevice">Modify Device</a></li>
                 <li><a href="" id="existingdevices">Existing Devices</a></li>
               </ul>
             </li>
 
           <li class="dropdown">
-              <a href="#" class="dropdown-toggle" id="stonybrook" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" id="stonybrook" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="adduser.html" id="adduserwindow">Add a New User</a></li>
+                <li><a href="" id="adduser">Add User</a></li>
+                <li><a href="" id="removeusers">Remove User</a></li>
+                <li><a href="" id="modifyuser">Modify User</a></li>
                 <li><a href="" id="existingusers">Existing Users</a></li>
             </ul>
             </li>
         </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <ul class="nav navbar-nav">
-              <li><a href="/Users/verb/Documents/WebDeveloper/SBU_IOT/about.html">About</a></li>
-            </ul>
-          </ul>
-
-        </div><!-- navbar-collapse -->
+       </div><!-- navbar-collapse -->
       </div><!-- container-fluid -->
     </nav>
-  <p></p>
-  <p></p>
-  <p></p>
 
-    <div class="container" id="usertypes">
-      <div class="jumbotron">
+    <div class="container" >
+      <div class="jumbotron" id="usertypes">
       <h2>User Types:</h2>
       <ul>
-          <li> Faculty</li>
+          <li>Faculty</li>
           <li>Staff</li>
-          <li>Grad Students</li>
-          <li>Undergrad Students</li>
-          <li>Guest Users</li>
+          <li>Graduate Students</li>
+          <li>Undergraduate Students</li>
     </ul>
     </div>
     </div>
-
 
     <div class="container">
       <div class="jumbotron">
@@ -91,7 +83,7 @@
           <li><i>Air Conditioning</i></li>
           <li><i>Fan</i></li>
           <li><i>Heater</i></li>
-          <li><i>Printer</i></li>
+          <li><i>Door</i></li>
         </ul>
     </li>
       </ul>
@@ -112,23 +104,14 @@
     </table>
 </div> -->
     <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
-    <div class="container">
-      <div class="jumbotron">
-    <div class="" id="ttbl">
 
-      <table class="table  table-bordered table-hover" id="allusertable" >
-      <tr class=""> <th>No</th> <th>User First Name</th> <th>User Last Name</th> <th>User Type</th> <th>Email Id</th><th>SBU Id</th></tr>
-        </table>
-    </div>
-  </div>
-  </div>
     <script
     src="http://code.jquery.com/jquery-3.1.1.js"
     integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
     crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <script src='SBU_IOT_1.js'></script>
+  <script src='/Users/verb/Desktop/WebPage/SBU_IOT_1.js'></script>
 
   </body>
   </html>

@@ -4,21 +4,21 @@
     <meta charset="utf-8">
     <title>Add_Device</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-  </head>
+</head>
   <body>
 <!-- nav bar -->
     <nav class="navbar navbar-inverse">
     <div class="navbar-header">
-    <a class="navbar-brand" href="/Users/verb/Documents/WebDeveloper/SBU_IOT/mainpage.html" id="stonybrook">Back</a>
+    <a class="navbar-brand" href="" id="stonybrook">Back</a>
 
-<form class="" id="form_adddevice"action="" method="post">
+<form class="blue" id="form_adddevice"action="" method="post">
 
 
     <div class="container">
     <div class="jumbotron">
-    <h1>Please Enter Device Details</h1>
-    <div class="" id="devicecategory">
+    <h2><em>Please Enter Device Details</em></h2>
+    <p></p><p></p><br>
+    <div class="blue" id="devicecategory">
           <label for="userem">Building Name:</label>
           <select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" class="form-control" name="buildingname" >
               <option value=""></option>
@@ -51,23 +51,26 @@
           <option value="Heater">Heater</option>
           <option value="Door">Door</option>
       </select>
-        <p></p>
-        <input type="text" name="status" value="off" hidden="">
-        <input type="number" name="working" value="1" hidden="">
+<p></p>
+<label for="useraccess">Give Access Right to :</label><br>
+      <input type="checkbox" class="useraccess" name="accessright" value="Faculty"> <em>Faculty</em> <br>
+      <input type="checkbox"   class="useraccess" name="accessright" value="Staff"> <em>Staff</em> <br>
+        <input type="checkbox"   class="useraccess" name="accessright" value="Graduate Student"> <em>Graduate Student</em> <br>
+      <input type="checkbox"  class="useraccess" name="accessright" value="Undergraduate Student"> <em>Undergraduate Student</em><br><br>
 
-        <p></p>
         <input type="submit" class="btn btn-outline-success" name="deviceAdd" value="Add">
       </div>
     </div>
 
 </form>
 
-<script
-src="https://code.jquery.com/jquery-3.1.1.min.js"
-integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-crossorigin="anonymous">
-</script>
-<script src='SBU_IOT_1.js'>
-</script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+  </script>
+  <script src='/Users/verb/Desktop/WebPage/SBU_IOT_1.js'>
+  </script>
+<link rel="stylesheet" href="/Users/verb/Desktop/WebPage/addremovecss.css">
 </body>
 </html>
