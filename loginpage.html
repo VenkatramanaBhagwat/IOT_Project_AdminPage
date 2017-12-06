@@ -8,36 +8,34 @@
     <title></title>
   </head>
   <body>
-    <form action="">
+<form action="">
   <div class="imgcontainer">
     <!-- <img src="1img_avatar2.png" alt="Wellcome To Stony Brook IOT Admin Page" class="avatar"> -->
 
       <a href=""><img src="loginpage.png" alt="Wellcome To Stony Brook IOT Admin Page" class="avatar"></a></span>
   </div>
+</form>
+<form class="loginform" action="" method="post" id="loginform">
+<div class="imgcontainer">
+    <label id="green"><b>Username</b></label><br>
+    <input type="email" placeholder="Enter Username" name="adminemail" required><br>
 
-  <div class="container">
-    <label id="green"><b>Username</b></label>
-    <input type="email" placeholder="Enter Username" name="uname" required>
-<!--
-        <div class="jumbotron" >
-    <strong>Email:</strong>
-    <input type="email" class="form-control" name="adminemail" placeholder="Email" required>
-    <strong>Password:</strong>
-    <input type="password" class="form-control" name="adminpass" placeholder="Password" required>
-  </div>   -->
+    <label id="green"><b>Password</b></label><br>
+    <input type="password" name="adminpassword" placeholder="Enter Password" required ><br>
 
-    <label id="green"><b>Password</b></label>
-    <input type="password" name="adminpass" placeholder="Enter Password" required >
+    <input type="submit" class="loginbutton" id="loginbutton" name="Add" value="Login">
 
-    <button type="submit" class="loginbutton" id="loginbutton">Login</button>
     <p></p>
-    <a href="#">Forgot Password?</a></span>
+    <a href="#">Forgot Password?</a></span><br>
+     
+  </div>
 </form>
    <p></p>
-  <div class="container" style="" id="login">
+
+  <!-- <div class="jumbotron" id="details">
   <p>This is the admin page for IOT Device & User Management.Admin has the right to Add, Modify or Remove Users/Devices</p>
   <p>Admin has the authority to change the access control allowed to any users without prior notice to the end user</p>
-  </div>
+  </div> -->
 <script
 src="https://code.jquery.com/jquery-3.1.1.min.js"
 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
