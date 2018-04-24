@@ -1,2 +1,2 @@
-# IOT_Project_AdminPage
+# AdminPage
 Admin webpage for IOT project
